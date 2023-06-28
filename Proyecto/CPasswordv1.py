@@ -17,12 +17,12 @@ print("Su contraseña: ")
 with open('contrasenas.txt', 'w') as f:
     while True:
         data = s.recv(1024)
-        s.close()
-        #if not data:
-        #    break
+        #s.close()
+        if not data:
+            break
         #s.close()            
         f.write(data.decode() + '\n')
         print(data.decode())
 
-        #s.close()
+        s.close()
 

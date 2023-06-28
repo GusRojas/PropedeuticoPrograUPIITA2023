@@ -1,5 +1,5 @@
 import socket
-import secrets
+import random
 import string
 
 def generar_contrasena(requisitos):
@@ -13,7 +13,7 @@ def generar_contrasena(requisitos):
         alfabeto += string.digits
     if caracteres_especiales == 'True':
         alfabeto += string.punctuation
-    contrasena = ''.join(secrets.choice(alfabeto) for i in range(int(longitud)))
+    contrasena = ''.join(random.choice(alfabeto) for i in range(int(longitud)))
     return contrasena
 
 HOST = '127.0.0.1'  # dirección IP del servidor
